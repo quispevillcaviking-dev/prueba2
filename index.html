@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floristería Bolivia</title>
+
+<link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+<style>
+
+/* ===== COLORES ELEGANTES FLORAL ===== */
+:root{
+--rosa:#e91e63;
+--rosa-suave:#f8bbd0;
+--verde:#e52f8d;
+--crema:#fffaf5;
+--oscuro:#2b2b2b;
+}
+
+body{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+background:var(--crema);
+}
+
+main{
+flex:1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-custom{
+background: rgba(255,255,255,0.7);
+backdrop-filter: blur(10px);
+transition: 0.3s;
+padding: 12px 0;
+}
+
+.navbar-custom .nav-link{
+color: var(--oscuro);
+font-weight: 500;
+margin: 0 10px;
+position: relative;
+}
+
+.navbar-custom .nav-link::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background: var(--rosa);
+left:0;
+bottom:0;
+transition:0.3s;
+}
+
+.navbar-custom .nav-link:hover{
+color: var(--rosa);
+}
+
+.navbar-custom .nav-link:hover::after{
+width:100%;
+}
+
+.logo-icon{
+font-size:22px;
+}
+
+/* BOTÓN */
+.btn-contacto{
+background: linear-gradient(45deg, var(--rosa), #ff80ab);
+color:#fff;
+border-radius:30px;
+padding:8px 20px;
+font-weight:600;
+border:none;
+}
+
+.btn-contacto:hover{
+background: linear-gradient(45deg, #d81b60, #f06292);
+}
+
+/* ===== HERO ===== */
+.hero {
+position: relative;
+height: 100vh;
+overflow: hidden;
+}
+
+.video-bg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+z-index:1;
+}
+
+.video-bg video{
+width:33.33%;
+height:100%;
+object-fit:cover;
+}
+
+/* OVERLAY SUAVE ROSA */
+.overlay {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: rgba(233,30,99,0.3);
+z-index:2;
+}
+
+.hero-content{
+position:relative;
+z-index:3;
+height:100%;
+}
+
+.hero-content h1{
+color:white;
+}
+
+.hero-content p{
+color:#ffe4ec;
+}
+
+/* CURVA */
+.svg-hero{
+position:absolute;
+bottom:0;
+width:100%;
+z-index:5;
+}
+
+.svg-hero svg{
+width:100%;
+height:120px;
+}
+
+/* ===== INFO ===== */
+.info-section{
+background:#fff;
+padding:60px 0;
+}
+
+.card{
+border:none;
+border-radius:15px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform: translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-title{
+color: var(--verde);
+font-weight:bold;
+}
+
+.footer-main{
+background: linear-gradient(135deg, #f8bbd0, #f48fb1, #ec407a);
+color:#fff;
+}
+
+.footer-main h5{
+color:#ffffff;
+margin-bottom:15px;
+}
+
+.footer-main p{
+margin-bottom:8px;
+font-size:14px;
+}
+
+.social-icon{
+display:inline-block;
+margin-right:10px;
+font-size:20px;
+transition:0.3s;
+text-decoration:none;
+color:#fff;
+}
+
+.social-icon:hover{
+transform: scale(1.2);
+color:#ffe4ec;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+<div class="container">
+
+<a class="navbar-brand fw-bold text-uppercase d-flex align-items-center" href="#">
+<span class="logo-icon me-2">🌸</span>
+Flores Eternas
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto align-items-lg-center text-center">
+
+<li class="nav-item">
+<a class="nav-link active" href="index.html">Inicio</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="nosotros.html">Nosotros</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="galeria.html">Galería</a>
+</li>
+
+<li class="nav-item ms-lg-3">
+<a class="btn btn-contacto" href="contactos.htm">Contacto</a>
+</li>
+
+</ul>
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="video-bg">
+<video autoplay muted loop>
+<source src="videos/Flores con limpiapipas.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop>
+<source src="" type="video/mp4">
+</video>
+
+<video autoplay muted loop>
+<source src="videos/Girasoles de Limpiapipas 🌻,  Pipe cleaner sunflowers🌻.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="overlay"></div>
+
+<div class="hero-content d-flex align-items-center">
+<div class="container text-white">
+<h1 class="display-2 fw-bold">FLORERIA🌷</h1>
+<p class="lead fs-3">BOLIVIA</p>
+</div>
+</div>
+
+<div class="svg-hero">
+<svg viewBox="0 0 500 150" preserveAspectRatio="none">
+<path d="M-9.87,79.45 C219.80,303.47 243.50,-111.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+style="fill: #fff;"></path>
+</svg>
+</div>
+
+</section>
+
+<!-- INFO -->
+<section class="info-section">
+<div class="container">
+
+<h2 class="text-center mb-5" style="color:var(--verde)">Nuestros Productos</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/PRINSIPAL .jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 10 tulipane y 2 lirios</p>
+<p class="precio">Bs. 140</p>
+<button class="btn btn-contacto"
+data-nombre="Ramo De 10 tulipane y 2 lirios"
+data-precio="Bs. 140"
+data-imagen="FLORES/PRINSIPAL .jpeg"
+onclick="comprar(this)">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/WhatsApp Image 2026-03-22 at 4.59.13 PM.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 6 tulipanes y 2 lirios</p>
+<p class="precio">Bs. 86</p>
+<button class="btn btn-contacto"
+data-nombre="Ramo De 6 tulipanes y 2 lirios"
+data-precio="Bs. 86"
+data-imagen="FLORES/WhatsApp Image 2026-03-22 at 4.59.13 PM.jpeg"
+onclick="comprar(this)">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/Ramo artesanal con f.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 12 tulipanes y 2 lirios </p>
+<p class="precio">Bs. 160</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/GIRASOL CON FLORES MORADAS.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De un girason y 6 lirios </p>
+<p class="precio">Bs. 130</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/TULIPANE S MORASO CON LUZ.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 10 tulipanes y 2 lirios </p>
+<p class="precio">Bs. 140</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/Ramo de flores morad.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 8 tulipanes</p>
+<p class="precio">Bs. 86</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/MANSANILAS AMARILLAS.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 22 margaritas </p>
+<p class="precio">Bs. 86</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/3 GIRASOLES.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 3 girasoles</p>
+<p class="precio">Bs. 86</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/Ramo amarillo centra.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 10 tulipanes y 2 lirios </p>
+<p class="precio">Bs. 140</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/GIRASOLES DE COLOR ROSA Y MORADO.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 9 guirasoles de colors</p>
+<p class="precio">Bs. 160</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/Ramo de flores artif.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>de margaaritas rosadas</p>
+<p class="precio">Bs. 86</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/1.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 7 tulipane </p>
+<p class="precio">Bs. 76</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/GRANDE OFI.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 21 tulipanes , 3 lirios y 1 girasol</p>
+<p class="precio">Bs. 290</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/ROSA GRANDE.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 11 tulipanes y 1 girasol</p>
+<p class="precio">Bs. 150</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/Ramo de flores sin m.png" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 21 tulipanes y 1 girasol </p>
+<p class="precio">Bs. 260</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/PATITO CON LUZ.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 5 lirios y 2 tulipanes</p>
+<p class="precio">Bs. 96</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/AZUL SIMPLE.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 3 tulipanes y 1 lirio</p>
+<p class="precio">Bs. 66</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/WhatsApp Image 2026-03-22 at 8.23.25 PM.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 2 lirios ,2 tulipan </p>
+<p class="precio">Bs. 76</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/BUCHON CON 1 GIRA.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 10 flores y 1 girasol</p>
+<p class="precio">Bs. 160</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/ROSAS ROJAS.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 13 rosas</p>
+<p class="precio">Bs. 140</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/ROSAS ROSADAS.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 13 rosas</p>
+<p class="precio">Bs. 140</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/HOMBRE ARAÑA.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 12 tulipanes </p>
+<p class="precio">Bs. 140</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/HOTHELL.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 3 tulipans y 1 lirio ma 2 hot wheeles</p>
+<p class="precio">Bs. 140</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="FLORES/ONEPIS.jpeg" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Ramo</h5>
+<p>De 7 flores y 1 sombrero de one pice</p>
+<p class="precio">Bs. 120</p>
+<button class="btn btn-contacto"
+onclick="comprar('Rosas','Bs. 60','IMAGENSE/FLORES/ROSAS ROJAS.jpeg')">
+Comprar
+</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-main pt-5 pb-4">
+
+<div class="container">
+
+<div class="row g-4">
+
+<!-- INFO -->
+<div class="col-md-4">
+<h5 class="fw-bold">🌸 Floristería Bolivia</h5>
+
+<p>
+En <strong>Flores Eternas</strong> transformamos flores naturales en piezas
+que conservan su belleza por años, ofreciendo elegancia, exclusividad
+y un detalle inolvidable en cada creación.
+</p>
+
+<p class="small">
+🌹 Rosas preservadas de alta calidad <br>
+💎 ramos eternos <br>
+🎁 Diseños elegantes para regalos especiales
+</p>
+
+
+</div>
+
+<!-- CONTACTO -->
+<div class="col-md-4">
+<h5 class="fw-bold">Contacto</h5>
+
+<p>📍 La Paz, Bolivia</p>
+<p>📞 +591 73053670</p>
+<p>💬 Atención por WhatsApp</p>
+
+
+<p class="mt-3 small">
+🕒 Horarios de atención: <br>
+Lunes a Sábado: 9:00 - 19:00 <br>
+Domingos: 10:00 - 14:00
+</p>
+
+<p class="small">
+🚚 Entregas rápidas y seguras en toda La Paz
+</p>
+</div>
+
+<!-- MAPA -->
+<div class="col-md-4">
+<h5 class="fw-bold">Ubicación</h5>
+
+<div class="ratio ratio-4x3 rounded overflow-hidden shadow">
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d680.4940009847929!2d-68.25568307697932!3d-16.47773261485162!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sus!4v1774234687607!5m2!1ses-419!2sus"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+
+<p class="mt-2 small">
+Punto de atención y recojo disponible
+</p>
+</div>
+
+</div>
+
+<hr class="my-4 border-light opacity-25">
+
+<!-- EXTRA PROFESIONAL -->
+<div class="row text-center small">
+
+<div class="col-md-4 mb-2">
+Métodos de pago: Transferencia y efectivo
+</div>
+
+<div class="col-md-4 mb-2">
+Diseños personalizados según tu ocasión
+</div>
+
+<div class="col-md-4 mb-2">
+Garantía de calidad en cada arreglo
+</div>
+
+</div>
+
+<div class="text-center mt-3">
+<p class="mb-0">
+© 2026 <strong>Floristería Bolivia</strong> | Especialistas en Flores Eternas
+</p>
+</div>
+
+</div>
+
+</footer>
+
+
+
+
+
+
+<script>
+function comprar(nombre, precio, imagen){
+
+const numero = "59173053670";
+
+const mensaje = `Hola, quiero comprar:
+🌸 Producto: ${nombre}
+💰 Precio: ${precio}
+
+📸 Imagen:
+${imagen}`;
+
+const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+window.open(url, "_blank");
+}
+</script>
+
+<script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+<script src="compra.js"></script>
+
+</body>
+</html>
